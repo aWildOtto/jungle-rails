@@ -1,0 +1,28 @@
+<section class="admin-products-index">
+
+  <header class="page-header">
+    <h1>Admin &raquo; All Categories</h1>
+  </header>
+
+  <div class="well">
+    <div class="form-group">
+      <%= form_tag("/admin/categories", method: "post") do %>
+        <%= label_tag(:new_category, "New Category:") %>
+        <%= text_field_tag("category[name]", nil, required: true) %>
+        <%= submit_tag("Add", class: "btn btn-primary")%>
+      <%end%>  
+    </div>
+  </div>
+
+  <div class="panel panel-default products">
+    <table class="table table-bordered">
+      <thead>
+        <th colspan="2">Categories</th>
+      </thead>
+      <tbody>
+        <%= render @categories%>
+      </tbody>
+    </table>
+  </div>
+
+</section>
