@@ -1,0 +1,15 @@
+Hi, <%= "#{@current_user.first_name} #{@current_user.last_name}" %>
+
+Your order#<%= @order.id%> has been placed!
+You have ordered:
+<% @order.line_items.each do |item|%>     
+    <%= item.quantity%> <%= item.product.name%>     
+        <%= item.product.price%>
+<%end%>
+Total: <%=@order.total%>
+You can view your order at <%= @url%>
+    
+Thanks for joining and have a great day!
+
+Kind regards,
+Jungle team

@@ -1,11 +1,13 @@
-<section class="orders-show">
-
-  <header class="page-header">
-    <h1>Order #<%= @order.id %></h1>
-  </header>
-
-  <div class="order-summary jumbotron">
-    <h4>Thank you for your order!</h4>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi, <%= "#{@current_user.first_name} #{@current_user.last_name}" %></h1>
+    <p>
+      Your order# <%= @order.id%> has been placed
+    </p>
     <table class="table table-bordered">
       <thead>
         <tr>
@@ -18,7 +20,7 @@
       <% @order.line_items.each do |item| %>
         <tr>
           <td>
-            <%= image_tag item.product.image.tiny %>
+             <%= image_tag item.product.image.thumb , alt: item.product.name %>>
           </td>
           <td>
             <h4><%= item.product.name %></h4>
@@ -47,8 +49,9 @@
         </tr>
       </tfoot>
     </table>
-  </div>
-
-  <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
-
-</section>
+    <p>Thanks for your order and have a great day!</p>
+    <p>You can check your order at <%= @url%></p>
+    <p>Kind regards</p>
+    <p>Jungle team</p>
+  </body>
+</html>
