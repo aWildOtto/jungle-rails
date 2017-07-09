@@ -14,14 +14,23 @@ Based on the unfinished project that has most basic functionalities, added new f
 
 ## Screenshots
 ![1](/screenshot/1.png)
+* Main page displays all products, add to cart by clicking the add button
 ![2](/screenshot/2.png)
+* Detail page of a product. User can also review the product here if they are logged in, or browse reviews without logging in
 ![3](/screenshot/3.png)
+* Log in page
 ![4](/screenshot/4.png)
+* Checkout page
 ![5](/screenshot/5.png)
+* Paying via Stripe
 ![6](/screenshot/6.png)
+* Detailed order page. a samilar receipt is also sent to user's email 
 ![7](/screenshot/7.png)
+* Admin tools. Sellers can add/delete products here
 ![8](/screenshot/8.png)
+* Seller can also add/delete categories 
 ![9](/screenshot/9.png)
+* Only a category without products in it can be deleted 
 
 ## Setup
 
