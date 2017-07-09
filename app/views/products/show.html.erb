@@ -28,4 +28,43 @@
 
   </article>
 
+
+  <article class='row'>
+    <header>
+      <h2>Reviews</h2>
+        <% if current_user%>
+          <%= form_for @review, url: product_reviews_url(@product), class: 'form-group' do |f|%>
+            <%= f.hidden_field :product_id, :value => @product.id%>
+            <%= f.text_area :description, size: "60x5", class: 'form-control'%>
+            Rate: <%= f.select(:rating, class: 'dropdown') do%>
+              <% [['1', 1], ['2',2], ['3',3], ['4',4], ['5',5]].each do |c| %>
+                <%= content_tag(:option, c.first, value: c.last)%>
+              <%end%>
+            <%end%>
+            <div class='col-sm-5'></div>
+            <%= f.submit class: 'btn btn-primary submit-btn'%>
+          <%end%>
+        <%end%>  
+    </header>
+    <div>
+      <% @product.reviews.reverse.each do |review|%>
+        <div class="jumbotron">
+          <h3>
+            <%="#{review.user.first_name} #{review.user.last_name}"%>
+          </h3>
+          <h5>
+            Rating: <%="#{review.rating}/5"%>
+          </h5>
+          <p>
+            <%= review.description%>
+          </p>
+          <p>
+            <%= review.created_at%>
+          </p>
+        </div>
+      <%end%>
+    </div>
+  </article>
+ 
+
 </section>

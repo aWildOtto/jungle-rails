@@ -132,5 +132,47 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+puts 're-creating one user'
+user1 = User.create!({
+  first_name: 'Otto',
+  last_name: 'Hu',
+  email: 'ottohu101@gmail.com',
+  password: '1234'
+})
+user2 = User.create!({
+  first_name: 'Jack',
+  last_name: 'Hu',
+  email: 'otto.hu@yahoo.ca',
+  password: '1234'
+})
+user3 = User.create!({
+  first_name: 'Mike',
+  last_name: 'Wu',
+  email: 'ottothegod@hotmail.com',
+  password: '1234'
+})
+
+puts 're-creating some reviews'
+Review.create!({
+  description: 'I love this item and never regretted buying it',
+  rating: 5,
+  user_id: user1.id,
+  product_id: 1}
+)
+
+Review.create!({
+  description: 'hated it, worst buy ever',
+  rating: 1,
+  user_id: user2.id,
+  product_id: 1}
+)
+
+Review.create!({
+  description: 'I don\'t care',
+  rating: 3,
+  user_id: user3.id,
+  product_id: 1}
+)
+
 
 puts "DONE!"

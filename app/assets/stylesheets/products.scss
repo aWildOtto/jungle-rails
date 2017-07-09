@@ -84,3 +84,31 @@ main section.products-show {
 }
 
 
+
+.jumbotron {
+  background-color: #BBDEFB;
+  word-wrap: break-word;
+}
+
+.submit-btn {
+  margin: 10px 10px 10px 0px;
+}
+
+.login_msg {
+  margin: 15px 15px 15px 170px;
+}
+
+.footer {
+  position:fixed;
+  height:50px;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  margin-bottom:0px;
+  background-color: #f8f8f8;
+  border: 1px solid;
+  border-color: #e7e7e7;
+  blockquote {
+    float: right;
+  }
+}
