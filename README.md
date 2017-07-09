@@ -3,13 +3,13 @@
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
 Based on the unfinished project that has most basic functionalities, added new features:
-- sold out badges
-- add/delete categories
-- order details and email receipt
-- admin mode authentication
-- user reviews and ratings
-- empty cart notice
-- bug fixes
+- Sold out badges show if a product's quantity is 0. User can't add an item to cart if it's sold out.
+- Add/delete categories. Simple in-place add without using a second page. Can't delete when there is products registered under the category.
+- Order details and email receipt. Order page shows all items in the order with images and descriptions.
+- Admin mode authentication. To access admin tools user need an extra login that can be specified in a .env file
+- User reviews and ratings. Users have to log in to review a product. Placeholder shown when there is no reviews.
+- Empty cart notice. User can't check out an empty cart. A link is displayed in an empty cart
+- Bug fixes
 - UI touches
 
 ## Screenshots
