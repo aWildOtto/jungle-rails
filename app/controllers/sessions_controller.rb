@@ -5,7 +5,6 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by_email(params[:email])
-    puts "email is #{params[:email]}"
     # If the user exists AND the password entered is correct.
     if !user 
       redirect_to '/login', notice: "Email doesn't exist"

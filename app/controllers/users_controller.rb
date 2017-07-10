@@ -8,7 +8,7 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       redirect_to '/'
     else
-      redirect_to '/signup'
+      redirect_to '/signup', notice: 'This Email is already used'
     end
   end
 
