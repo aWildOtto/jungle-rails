@@ -137,19 +137,19 @@ user1 = User.create!({
   first_name: 'Otto',
   last_name: 'Hu',
   email: 'ottohu101@gmail.com',
-  password: '1234'
+  password: '123456'
 })
 user2 = User.create!({
   first_name: 'Jack',
   last_name: 'Hu',
   email: 'otto.hu@yahoo.ca',
-  password: '1234'
+  password: '123456'
 })
 user3 = User.create!({
   first_name: 'Mike',
   last_name: 'Wu',
   email: 'ottothegod@hotmail.com',
-  password: '1234'
+  password: '123456'
 })
 
 puts 're-creating some reviews'
