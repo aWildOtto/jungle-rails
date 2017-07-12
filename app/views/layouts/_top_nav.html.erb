@@ -31,8 +31,8 @@
               Signed in as <%= "#{current_user.first_name}, #{current_user.last_name}"%>
               <%= link_to 'LOG OUT', :logout%>
             <%else%>
-              <%= link_to 'SIGN UP', :signup%>
-              <%= link_to 'LOG IN', :login%>
+              <%= link_to 'SIGN UP', :signup, id:"sign_up"%>
+              <%= link_to 'LOG IN', :login, id:"log_in"%>
             <%end%>
           </div>
         </li>
